@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.10" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="A Claude Code skill for students" />
+  <title>Coursework Manager — How to Use</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Coursework Manager — How to Use</h1>
+<p class="author">A Claude Code skill for students</p>
+<p class="date">Share freely</p>
+</header>
+<h2 id="what-it-does">What it does</h2>
+<p>Turns messy inputs — live class notes, uploaded PDFs, a schedule
+spreadsheet, an instructor email — into a clean, linked, trackable
+Markdown coursework vault. For any degree, any courses.</p>
+<ul>
+<li><strong>Class notes</strong> → structured, typos fixed, with
+<em>questions to ask in class</em>.</li>
+<li><strong>Uploaded files</strong> (PDF/DOC/DOCX/XLSX) → filed into the
+right course folder.</li>
+<li><strong>Readings</strong> → class-ready briefings (abstract +
+critical questions).</li>
+<li><strong>Dashboard</strong> → progress bars, a chart, and the full
+class schedule at a glance.</li>
+<li><strong>Assignments/term projects</strong> → trackers with a
+<code>Not started → Drafting → Submitted → Feedback → Reworking → Done</code>
+pipeline.</li>
+</ul>
+<h2 id="install-once-1-minute">Install (once, ~1 minute)</h2>
+<ol type="1">
+<li>Get the <code>coursework-manager/</code> folder (or unzip
+<code>coursework-manager.zip</code>).</li>
+<li>Copy it into your Claude Code skills directory:
+<ul>
+<li>All your projects:
+<code>~/.claude/skills/coursework-manager/</code></li>
+<li>One repo only:
+<code>&lt;repo&gt;/.claude/skills/coursework-manager/</code></li>
+</ul></li>
+<li>Start a new Claude Code session. Done — it auto-registers.</li>
+</ol>
+<h2 id="use-it-just-ask-in-plain-english">Use it (just ask in plain
+English)</h2>
+<ul>
+<li>“Capture my class notes: …”</li>
+<li>“I dropped files in <code>uploads/</code> — file them into the right
+course.”</li>
+<li>“Make briefing notes for this reading, with questions to ask.”</li>
+<li>“Build a coursework dashboard with progress bars and the
+schedule.”</li>
+<li>“Set up a term-project tracker for my qualitative course.”</li>
+</ul>
+<p>Or type <code>/coursework-manager</code> to invoke it explicitly.</p>
+<h2 id="set-up-your-vault-first-time">Set up your vault (first
+time)</h2>
+<p>Make a <code>coursework/</code> folder. Per course, copy the
+templates from the skill’s <code>templates/</code> folder:
+<code>course-README.md</code>, <code>notes.md</code>,
+<code>briefing-notes.md</code>, <code>project-tracker.md</code>; put one
+<code>dashboard.md</code> at the top. Then just talk to Claude as the
+term goes — it keeps everything updated.</p>
+<h2 id="handy-to-know">Handy to know</h2>
+<ul>
+<li>Reads Word (<code>.doc/.docx</code>) and Excel (<code>.xlsx</code>)
+you give it; can produce Word docs for “submit in Word”
+assignments.</li>
+<li>Only organises files you provide — it uploads nothing. Keep your
+vault private if your notes are sensitive.</li>
+</ul>
+<p><em>Made by a fellow scholar — improve it and pass it on.</em></p>
+</body>
+</html>

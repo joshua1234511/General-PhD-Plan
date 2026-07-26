@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.10" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Same instructions, different packaging per tool" />
+  <title>Coursework Manager — Install on Other Tools</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Coursework Manager — Install on Other Tools</h1>
+<p class="author">Same instructions, different packaging per tool</p>
+<p class="date">Share freely</p>
+</header>
+<p>The skill is just <strong>instructions + templates</strong> (in
+<code>SKILL.md</code> and <code>templates/</code>). Any AI assistant can
+use them — you only change <em>where you paste them</em>. The source of
+truth is <code>coursework-manager/SKILL.md</code>; copy its body
+wherever a tool asks for “instructions/rules”.</p>
+<h2 id="what-transfers-and-what-doesnt">What transfers (and what
+doesn’t)</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr>
+<th>Tool</th>
+<th style="text-align: center;">Reads/writes your files?</th>
+<th style="text-align: center;">Runs commands (move files, pandoc)?</th>
+<th style="text-align: center;">Full skill works?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claude Code</strong></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅ native (<code>SKILL.md</code>)</td>
+</tr>
+<tr>
+<td><strong>Cursor</strong></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅ (Agent)</td>
+<td style="text-align: center;">✅ via a Rule</td>
+</tr>
+<tr>
+<td><strong>GitHub Copilot</strong> (VS Code)</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅ (Agent mode)</td>
+<td style="text-align: center;">✅ via custom instructions / prompt
+file</td>
+</tr>
+<tr>
+<td><strong>ChatGPT</strong> (web)</td>
+<td style="text-align: center;">❌ local files</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">⚠️ Generates the content; you paste
+inputs &amp; save outputs</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The <strong>filing/dashboard/pandoc</strong> steps need file +
+terminal access. Cursor and Copilot (agent mode) have it, so the whole
+workflow runs. ChatGPT can’t touch your computer — it still writes great
+notes/briefings/trackers as text for you to copy into files.</p>
+</blockquote>
+<hr />
+<h2 id="cursor">Cursor</h2>
+<p>Cursor uses <strong>Rules</strong> instead of skills. 1. In your
+project, create <code>.cursor/rules/coursework-manager.mdc</code>. 2.
+Paste the <strong>body of <code>SKILL.md</code></strong> into it, with
+this header on top:
+<code>---    description: Organise &amp; track university coursework — class notes, filing course      files, reading briefings, dashboard, assignment trackers.    alwaysApply: false    ---</code>
+(<code>alwaysApply: false</code> = Cursor pulls it in when relevant; you
+can also invoke it by typing <code>@coursework-manager</code> in chat.)
+3. Copy the <code>templates/</code> folder into your project
+(e.g. <code>coursework/_templates/</code>). 4. Use the
+<strong>Agent</strong> (⌘I) and ask in plain English — it can read/write
+files and run the <code>pandoc</code>/<code>textutil</code> commands, so
+the full workflow works. <em>(User-wide alternative: Cursor Settings →
+Rules → add it as a User Rule.)</em></p>
+<h2 id="github-copilot-vs-code">GitHub Copilot (VS Code)</h2>
+<p>Copilot uses <strong>custom instructions</strong> and <strong>prompt
+files</strong>. 1. <strong>Always-on:</strong> create
+<code>.github/copilot-instructions.md</code> and paste the
+<code>SKILL.md</code> body. Copilot Chat applies it automatically in
+that repo. 2. <strong>On-demand (recommended):</strong> create
+<code>.github/prompts/coursework-manager.prompt.md</code>, paste the
+<code>SKILL.md</code> body, then run it from Chat with
+<code>/coursework-manager</code>. 3. Copy the <code>templates/</code>
+folder into the repo. 4. Use <strong>Copilot Chat in Agent mode</strong>
+(it can edit files and run terminal commands) for the full workflow;
+Ask/Edit mode still generates the notes/briefings.</p>
+<h2 id="chatgpt">ChatGPT</h2>
+<p>No file access, so use it as a <strong>content generator</strong>.
+Two good setups: - <strong>Custom GPT</strong> (needs ChatGPT Plus):
+<em>Explore GPTs → Create</em>. Paste the <code>SKILL.md</code> body
+into <strong>Instructions</strong>, upload the five
+<code>templates/</code> files as <strong>Knowledge</strong>, name it
+“Coursework Manager”, and share the link with classmates. -
+<strong>Project</strong> (or plain chat): create a ChatGPT
+<strong>Project</strong>, add the <code>SKILL.md</code> body as the
+project instructions and upload the templates. Or simply paste
+<code>SKILL.md</code> at the top of a new chat. -
+<strong>Workflow:</strong> paste your class notes / a reading’s text →
+it returns structured notes, briefings, or a tracker (use
+<strong>Canvas</strong> for long docs) → you copy the output into your
+own files. Upload a PDF and it can read it; it just can’t move files on
+your machine.</p>
+<hr />
+<h2 id="keep-one-source-of-truth">Keep one source of truth</h2>
+<p>Edit <code>coursework-manager/SKILL.md</code>, then re-paste it into
+each tool when you change it. The <code>templates/</code> files are
+identical everywhere.</p>
+<p><em>Made by a fellow scholar — improve it and pass it on.</em></p>
+</body>
+</html>
