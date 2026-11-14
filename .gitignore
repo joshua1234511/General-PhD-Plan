@@ -1,0 +1,21 @@
+# This repo is a public *template*. It publishes structure and guidance —
+# never anyone's actual manuscripts, data, reviews or coursework.
+
+.DS_Store
+*.swp
+~$*
+__pycache__/
+
+# --- Your own work ---------------------------------------------------------
+# Keep real paper folders (drafts, data, reviewer comments) in a private repo
+# or under these ignored paths.
+research/
+papers/
+coursework/
+
+# --- Third-party material (copyright) -------------------------------------
+# Published papers and licensed lists belong to their publishers.
+*.pdf
+!skills/*.pdf
+!skills/**/*.pdf
+*.xlsx

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.10" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Hand this whole file to an AI assistant and it will do the install" />
+  <title>Research Paper Manager — Install Instructions</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Research Paper Manager — Install Instructions</h1>
+<p class="author">Hand this whole file to an AI assistant and it will do
+the install</p>
+<p class="date">Share freely</p>
+</header>
+<p><strong>Human: you do not need to read this file.</strong> Open your
+AI assistant, attach or paste this file, and say: <em>“Install this
+skill for me.”</em> Then skip to
+<strong>research-paper-manager-how-to.md</strong> and start using
+it.</p>
+<p>Everything below is addressed to the assistant.</p>
+<hr />
+<h2 id="instructions-for-the-ai-assistant">Instructions for the AI
+assistant</h2>
+<p>You are installing a Claude Code skill called
+<strong>research-paper-manager</strong> for a research student. It is a
+folder of Markdown instructions plus templates and two Python scripts —
+there is nothing to compile and no network access required.</p>
+<h3 id="what-you-are-given">What you are given</h3>
+<p>This file sits inside a <code>skills/</code> folder. Next to it is
+the skill itself:</p>
+<pre><code>skills/
+  research-paper-manager/          ← the skill
+    SKILL.md                       ← the instructions; this is the source of truth
+    README.md                      ← what it does, for humans
+    templates/                     ← 11 Markdown templates it fills in
+    scripts/md_to_docx.py          ← Markdown → styled Word
+    scripts/md_to_pdf.py           ← Markdown → single-file PDF
+  research-paper-manager.zip       ← the same folder, zipped
+  research-paper-manager-how-to.md ← the user-facing guide
+  research-paper-manager-install.md ← this file</code></pre>
+<p>All paths in this file are <strong>relative to the
+<code>skills/</code> folder that contains it</strong>. Resolve them
+against wherever the user actually put it; do not assume any absolute
+path.</p>
+<h3 id="step-1-work-out-which-tool-you-are">Step 1 — work out which tool
+you are</h3>
+<p>Pick the matching section below. If you cannot run shell commands or
+write files, use the <strong>ChatGPT</strong> section, which needs
+neither.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr>
+<th>Tool</th>
+<th style="text-align: center;">Reads/writes files?</th>
+<th style="text-align: center;">Runs commands?</th>
+<th style="text-align: center;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claude Code</strong></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅ native skill</td>
+</tr>
+<tr>
+<td><strong>Cursor</strong></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅ (Agent)</td>
+<td style="text-align: center;">✅ via a Rule</td>
+</tr>
+<tr>
+<td><strong>GitHub Copilot</strong> (VS Code)</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅ (Agent mode)</td>
+<td style="text-align: center;">✅ via custom instructions / prompt
+file</td>
+</tr>
+<tr>
+<td><strong>ChatGPT</strong> (web)</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">⚠️ generates content; the user saves
+it</td>
+</tr>
+</tbody>
+</table>
+<p>The Word and PDF steps need file and terminal access. Cursor and
+Copilot in agent mode have it. ChatGPT does not — it still does every
+writing and checking workflow.</p>
+<h3 id="step-2-install">Step 2 — install</h3>
+<h4 id="claude-code">Claude Code</h4>
+<p>Copy the skill folder into the user’s skills directory. Ask which
+scope they want; default to user-wide if they have no preference.</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># user-wide — available in every project</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/.claude/skills</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-R</span> research-paper-manager ~/.claude/skills/research-paper-manager</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># or project-only — available in one repo</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> <span class="op">&lt;</span>repo<span class="op">&gt;</span>/.claude/skills</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-R</span> research-paper-manager <span class="op">&lt;</span>repo<span class="op">&gt;</span>/.claude/skills/research-paper-manager</span></code></pre></div>
+<p>If only the zip is present,
+<code>unzip research-paper-manager.zip</code> first.</p>
+<p>Then verify, and tell the user what you found:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">test</span> <span class="at">-f</span> ~/.claude/skills/research-paper-manager/SKILL.md <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> <span class="st">&quot;SKILL.md present&quot;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> ~/.claude/skills/research-paper-manager/templates <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span>    <span class="co"># expect 11</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> <span class="at">-3</span> ~/.claude/skills/research-paper-manager/SKILL.md        <span class="co"># expect: --- / name: / description:</span></span></code></pre></div>
+<p>Tell the user to <strong>start a new session</strong> — skills are
+registered at session start, so it will not appear in the one they are
+currently in.</p>
+<p>Do <strong>not</strong> copy the folder onto a path that is already a
+symlink; that writes through the link and produces a nested
+<code>research-paper-manager/research-paper-manager/</code>. Check with
+<code>test -L</code> first and remove the link if so.</p>
+<h4 id="cursor">Cursor</h4>
+<p>Cursor uses <strong>Rules</strong>, not skills.</p>
+<ol type="1">
+<li><p>Create <code>.cursor/rules/research-paper-manager.mdc</code> in
+the user’s project.</p></li>
+<li><p>Put this header at the top, then paste the <strong>entire body of
+<code>SKILL.md</code></strong> (everything after its closing
+<code>---</code>) beneath it:</p>
+<pre><code>---
+description: Manage an academic paper from plan to submission to reviewer response —
+  literature scan, citation audit, pre-submission peer review, venue submission,
+  reviewer response, AI-use disclosure.
+alwaysApply: false
+---</code></pre>
+<p><code>alwaysApply: false</code> means Cursor loads it when relevant;
+the user can also invoke it by typing
+<code>@research-paper-manager</code>.</p></li>
+<li><p>Copy the <code>templates/</code> folder into the project,
+e.g. <code>research/_templates/</code>.</p></li>
+<li><p>Copy <code>scripts/</code> too if the user wants Word or PDF
+output.</p></li>
+<li><p>Tell them to use the <strong>Agent</strong> (⌘I), which can read,
+write and run commands.</p></li>
+</ol>
+<p>User-wide alternative: Cursor Settings → Rules → add it as a User
+Rule.</p>
+<h4 id="github-copilot-vs-code">GitHub Copilot (VS Code)</h4>
+<ol type="1">
+<li><strong>On-demand (recommended):</strong> create
+<code>.github/prompts/research-paper-manager.prompt.md</code> and paste
+the <code>SKILL.md</code> body. The user runs it from Chat with
+<code>/research-paper-manager</code>.</li>
+<li><strong>Always-on alternative:</strong> paste the same body into
+<code>.github/copilot-instructions.md</code>. Copilot Chat then applies
+it automatically in that repo.</li>
+<li>Copy <code>templates/</code> and <code>scripts/</code> into the
+repo.</li>
+<li>Tell them to use <strong>Agent mode</strong> for the full workflow;
+Ask and Edit modes still produce the writing and checking output.</li>
+</ol>
+<h4 id="chatgpt">ChatGPT</h4>
+<p>No file access, so set it up as a content generator. Either:</p>
+<ul>
+<li><strong>Custom GPT</strong> (needs a paid plan): Explore GPTs →
+Create. Paste the <code>SKILL.md</code> body into
+<strong>Instructions</strong>, upload the 11 <code>templates/</code>
+files as <strong>Knowledge</strong>, name it “Research Paper Manager”,
+and share the link with classmates.</li>
+<li><strong>Project or plain chat:</strong> create a ChatGPT
+<strong>Project</strong>, add the <code>SKILL.md</code> body as the
+project instructions, upload the templates. Or just paste
+<code>SKILL.md</code> at the top of a new chat.</li>
+</ul>
+<p>Workflow to explain: the user pastes a manuscript or a reference
+list, gets back an audit, a review, a roadmap or a draft, and saves it
+into their own files. Uploaded PDFs can be read; files on their machine
+cannot be touched.</p>
+<h3 id="step-3-optional-dependencies">Step 3 — optional
+dependencies</h3>
+<p>Only needed for Word and PDF output. Everything else works without
+them.</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># macOS</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install pandoc typst</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Debian / Ubuntu</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install pandoc          <span class="co"># then install typst from https://typst.app</span></span></code></pre></div>
+<p><code>md_to_docx.py</code> needs <code>pandoc</code>.
+<code>md_to_pdf.py</code> needs <code>pandoc</code> and
+<code>typst</code>. If the user does not want Word or PDF, skip this
+entirely and say so rather than installing silently.</p>
+<h3 id="step-4-confirm-and-hand-over">Step 4 — confirm and hand
+over</h3>
+<p>Report back, in plain language: where you installed it, whether the
+11 templates are present, whether pandoc and typst are available, and
+that they must start a new session.</p>
+<p>Then point them at <strong>research-paper-manager-how-to.md</strong>
+and give them one thing to try:</p>
+<blockquote>
+<p><em>“check my citations in <their manuscript file>”</em></p>
+</blockquote>
+<h3 id="what-you-must-not-do">What you must not do</h3>
+<ul>
+<li>Do not rewrite <code>SKILL.md</code> to suit your own tool. Its
+rules — especially <em>gray zone = FAIL</em> and the ban on vibe citing
+— are the point of the skill. Reformat the wrapper, never the
+rules.</li>
+<li>Do not install anything beyond pandoc and typst, and only with the
+user’s agreement.</li>
+<li>Do not put the user’s paper drafts, data or unpublished work
+anywhere outside their own project folder.</li>
+</ul>
+<p><em>Made by a fellow scholar — improve it and pass it on.</em></p>
+</body>
+</html>
